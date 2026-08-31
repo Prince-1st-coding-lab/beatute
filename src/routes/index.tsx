@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone, Plus, Search, ShoppingBag } from "lucide-react";
 
 import heroImage from "@/assets/hero-skincare.jpg";
@@ -75,9 +75,11 @@ function Index() {
           </div>
           <span className="font-serif text-lg font-bold tracking-tight">Beautè Rwanda</span>
         </div>
-        <div className="flex gap-4 text-muted-foreground">
+        <div className="flex items-center gap-4 text-muted-foreground">
           <Search className="size-5" strokeWidth={2} />
-          <ShoppingBag className="size-5" strokeWidth={2} />
+          <Link to="/order" aria-label="Go to order page">
+            <ShoppingBag className="size-5" strokeWidth={2} />
+          </Link>
         </div>
       </nav>
 
@@ -100,14 +102,12 @@ function Index() {
               <br />
               <span className="italic">Delivered Locally.</span>
             </h1>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/order"
               className="w-fit rounded-full bg-white px-6 py-3 text-sm font-semibold text-primary shadow-lg transition-transform active:scale-95"
             >
-              Shop New Arrivals
-            </a>
+              Order Now
+            </Link>
           </div>
         </div>
       </section>
@@ -134,12 +134,12 @@ function Index() {
               Curated skincare for every skin type
             </p>
           </div>
-          <a
-            href={WHATSAPP_URL}
+          <Link
+            to="/order"
             className="border-b border-primary/20 pb-0.5 text-xs font-semibold text-primary"
           >
             View All
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-2 gap-4 px-4">
@@ -195,15 +195,13 @@ function Index() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-bold">{product.price}</span>
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Order ${product.name} on WhatsApp`}
+                  <Link
+                    to="/order"
+                    aria-label={`Order ${product.name}`}
                     className="flex size-8 items-center justify-center rounded-full bg-foreground text-background"
                   >
                     <Plus className="size-4" strokeWidth={2.5} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -220,15 +218,13 @@ function Index() {
             Partner with us for authentic beauty supplies at bulk prices for your
             business.
           </p>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/order"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-bold uppercase tracking-wide text-primary"
           >
-            Order on WhatsApp
+            Start an Order
             <WhatsAppIcon className="size-4" />
-          </a>
+          </Link>
         </div>
       </section>
 
