@@ -106,7 +106,7 @@ function Index() {
               to="/order"
               className="w-fit rounded-full bg-white px-6 py-3 text-sm font-semibold text-primary shadow-lg transition-transform active:scale-95"
             >
-              Order Now
+              Shop Now
             </Link>
           </div>
         </div>
@@ -222,7 +222,7 @@ function Index() {
             to="/order"
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-bold uppercase tracking-wide text-primary"
           >
-            Start an Order
+            Shop Now
             <WhatsAppIcon className="size-4" />
           </Link>
         </div>
